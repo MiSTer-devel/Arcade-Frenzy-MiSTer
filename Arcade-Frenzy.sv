@@ -149,7 +149,7 @@ localparam CONF_STR = {
 	"-;",
 	"R0,Reset;",
 	"J1,Fire,Start 1P,Start 2P,Coin;",
-        "jn,A,Start,Select,R;",
+	"jn,A,Start,Select,R;",
 	"V,v",`BUILD_DATE
 };
 
@@ -236,7 +236,6 @@ wire m_coin   = joy[7];
 
 
 wire hblank, vblank;
-wire ce_vid = clk_10;
 wire hs, vs;
 wire  r;
 wire  g;
@@ -329,7 +328,7 @@ berzerk berzerk(
 	.audio_out(audio),  
 	.start2(m_start2),
 	.start1(m_start1),
-	.coin1(m_coin|btn_coin_2),
+	.coin1(m_coin),
 	.cocktail(status[12]),
 	.right1(m_right),
 	.left1(m_left),
